@@ -7,6 +7,7 @@ document.querySelector("#app").innerHTML = `
     <div id="thought-container" class="thought-container">
       <p>Loading thought...</p>
     </div>
+    <button id="new-thought" class="new-thought-btn">Another Thought</button>
   </div>
 `;
 
@@ -19,3 +20,8 @@ async function loadRandomThought() {
 
 // Load the initial thought
 loadRandomThought();
+
+// Add click handler for the new thought button
+document
+  .querySelector("#new-thought")
+  .addEventListener("click", loadRandomThought);
